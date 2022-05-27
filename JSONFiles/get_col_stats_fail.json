@@ -1,0 +1,10 @@
+{
+    "dataset_id": "{{dataset_id}}",
+    "version_id": "{{version_id}}",
+    "user_id": "Sheshan01",
+    "session_id": "session007",
+    "col_names": [
+        "Count",
+        "Percentage"
+    ]
+}

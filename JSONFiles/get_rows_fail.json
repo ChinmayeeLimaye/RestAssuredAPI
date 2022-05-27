@@ -1,0 +1,20 @@
+{
+    "dataset_id": "{{dataset_id}}",
+    "version_id": "{{version_id}}",
+    "user_id": "Sheshan01",
+    "session_id": "session007",
+    "sort_obj" : {"col_name":"Percentage", "order":"DESC"},
+     "row_count" : 15,
+     "show_cols": [
+        "Single",
+        "Question",
+        "Segment Type",
+        "Count",
+        "Segment Description",
+        "Answer",
+        "Percentage",
+        "timestamp"
+    ]
+    
+    
+}

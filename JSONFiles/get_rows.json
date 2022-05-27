@@ -1,0 +1,27 @@
+{
+    "dataset_id": "{{dataset_id}}",
+    "version_id": "{{version_id}}",
+    "user_id": "Sheshan01",
+    "session_id": "session007",
+     "row_count" : 15,
+     "show_cols": [
+        "Age",
+        "Baths",
+        "Living",
+        "Rooms"
+    ],
+    
+    "sort_obj": {
+        "col_name": "Living",
+        "order": "ASC"
+    },
+    
+    "file_name": "homes.parquet",
+     "operations": [
+        {
+            "opr_name": "remove_missing_values",
+            "col_names":["Age"]
+        }
+        ]
+    
+}
