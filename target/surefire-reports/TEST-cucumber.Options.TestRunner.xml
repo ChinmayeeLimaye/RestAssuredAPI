@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="cucumber.Options.TestRunner" time="31.769" tests="7" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="cucumber.Options.TestRunner" time="26.687" tests="2" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
@@ -42,7 +42,7 @@
     <property name="java.class.path" value="/home/chinmayee/apache-maven-3.8.5-bin/apache-maven-3.8.5/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test verify"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -59,16 +59,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Verify Get_col_stats passes positive test cases #1" classname="Validation of Get_col_stats API" time="13.68"/>
-  <testcase name="Verify Get_col_stats passes positive test cases #2" classname="Validation of Get_col_stats API" time="11.524"/>
-  <testcase name="Verify Get_col_stats when no input file is given" classname="Validation of Get_col_stats API" time="0.229"/>
-  <testcase name="Verify Get_col_stats when no datasetid or version id is provided" classname="Validation of Get_col_stats API" time="0.026"/>
-  <testcase name="Verify Get_Rows passes positive test cases" classname="Validation of Get_Rows API" time="5.589"/>
-  <testcase name="Verify Get_Rows when no input file is given" classname="Validation of Get_Rows API" time="0.361">
-    <failure message="expected:&lt;500&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<500> but was:<400>
-]]></failure>
+  <testcase name="Verify Configure_Connector passes positive test cases" classname="Validation of Configure_Connector and Update_Connector API" time="26.184">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+</failure>
     <system-out><![CDATA[Request method:	POST
-Request URI:	http://localhost:7001/api/v1/dataset/add_by_path
+Request URI:	http://localhost:7002/api/v1/workspace/create
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -80,24 +75,26 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "project_id": "Us_census_data",
-    "url_path": "/weav-data/uploaded-raw-files",
-    "artifact_id": "",
-    "dataset_name": "Us_census_data",
-    "destination_path": "raw",
-    "destination": "Custom Destination",
-    "tags": [
-        
-    ],
-    "file_type": "csv",
-    "connector_id": "7e96005d-cbd3-4353-aa87-a5d305641ccc",
-    "source_name": "file",
-    "connector_name": "file"
+    "name": "workspace_demo"
 }
-{"data":{"dataset_id":"09c3fdcd-a726-4efb-b1bb-93494f7fcf76","version_id":"1.0.1653664181"},"status":{"code":200,"result":"success"}}
+{
+  "data": {
+    "anonymous_data_collection": false, 
+    "email": null, 
+    "name": "workspace_demo", 
+    "news": false, 
+    "notifications": null, 
+    "security_updates": false, 
+    "workspace_id": "f496d02c-9213-4ccf-8f26-616ad37b01a2"
+  }, 
+  "status": {
+    "code": 200, 
+    "result": "success"
+  }
+}
 
 Request method:	POST
-Request URI:	http://localhost:7013/api/v1/get_rows
+Request URI:	http://localhost:7002/api/v1/connector/configure
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -109,36 +106,43 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "dataset_id": "09c3fdcd-a726-4efb-b1bb-93494f7fcf76",
-    "version_id": "1.0.1653664181",
     "user_id": "Sheshan01",
-    "session_id": "session007",
-    "sort_obj": {
-        "col_name": "Percentage",
-        "order": "DESC"
-    },
-    "row_count": 15,
-    "show_cols": [
-        "Single",
-        "Question",
-        "Segment Type",
-        "Count",
-        "Segment Description",
-        "Answer",
-        "Percentage",
-        "timestamp"
-    ]
+    "workspace_id": "f496d02c-9213-4ccf-8f26-616ad37b01a2",
+    "connector_name": "Pokeapi",
+    "weav_dataset_name": "MainDataset",
+    "user_defined_name": "Pokeapi_data5",
+    "auth_method": "dummy",
+    "auth_token": "dummy",
+    "token_expiry_time": "dummy",
+    "project_id": "Pokeapi_data5",
+    "password": "dummy",
+    "api_key": "dummy",
+    "connection_configurations": {
+        "pokemon_name": "bulbasaur"
+    }
 }
 **********************************Resonse Data*************************************
 {
-  "data": "please provide file_name to perform specific operations: \"None of [Index(['timestamp', 'Percentage', 'Answer', 'Question', 'Count',\\n       'Segment Type', 'Single', 'Segment Description'],\\n      dtype='object')] are in the [columns]\"", 
+  "data": {
+    "connection_configurations": {
+      "pokemon_name": "bulbasaur"
+    }, 
+    "connection_id": null, 
+    "connector_id": "bc53f706-8041-4c97-be94-8a28216c669c", 
+    "destination_id": "430eb4b7-0bac-4150-b5a2-b996c842a68d", 
+    "id": "d924c6561ee54f95ab0026187fa581be", 
+    "message": "Connector configured successfully", 
+    "preview_strems": null, 
+    "sample_path": null, 
+    "sample_preview": null
+  }, 
   "status": {
-    "code": 500, 
-    "result": "fail"
+    "code": 200, 
+    "result": "success"
   }
 }
 
 ]]></system-out>
   </testcase>
-  <testcase name="Verify Get_Rows when no datasetid or version id is provided" classname="Validation of Get_Rows API" time="0.02"/>
+  <testcase name="Verify Update_Connector passes positive test cases" classname="Validation of Configure_Connector and Update_Connector API" time="0.145"/>
 </testsuite>

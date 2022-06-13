@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinations.DataBrowserAPI;
 
 import static io.restassured.RestAssured.given;
 
@@ -72,34 +72,7 @@ public class GetRowsStepDefination{
 	  
 	
 	
-		/*
-		 * @Given("the user has datasetid and versionid through {string}") public void
-		 * the_user_has_datasetid_and_versionid(String resource) throws IOException { //
-		 * Write code here that turns the phrase above into concrete actions
-		 * 
-		 * ReadConfig readconf1=new ReadConfig();
-		 * RestAssured.baseURI=readconf1.getDataServiceURL();
-		 * 
-		 * APIResources resourceAPI=APIResources.valueOf(resource);
-		 * 
-		 * 
-		 * Response
-		 * response1=given().log().all().header("Content-Type","application/json")
-		 * .body(new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir")+
-		 * "/JSONFiles/add_by_path.json")))) .when().post(resourceAPI.getResource())
-		 * .then().extract().response();
-		 * 
-		 * String string_resp=response1.asString(); System.out.println(string_resp);
-		 * 
-		 * JsonPath js=new JsonPath(string_resp);
-		 * 
-		 * datasetid=js.getString("data.dataset_id");
-		 * versionid=js.getString("data.version_id"); //System.out.println(datasetid);
-		 * //System.out.println(versionid);
-		 * 
-		 * 
-		 * }
-		 */
+		
 	
 	
 	@Then("column names in API response data should be equal to show column given in input file")
@@ -127,6 +100,7 @@ public class GetRowsStepDefination{
 		  
 		  try {
 		  datamap=(js.get("data[\""+filename+"\"].data[0]")); 
+		 // js.get("data[\"homes.parquet\"].data[0]")
 		  }
 		  
 		  catch(NullPointerException e) {

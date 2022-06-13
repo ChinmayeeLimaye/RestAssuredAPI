@@ -28,7 +28,7 @@ And message in result should be "fail"
 
 
 Scenario: Verify Get_col_stats when no datasetid or version id is provided
-Given the user has no  datasetid and versionid
+Given the user provides no  datasetid and versionid
 When the user calls "GetColStatsAPI" using request payload "get_col_stats_fail.json"
 Then user should get status code 400
 And user should get status line as "HTTP/1.0 400 BAD REQUEST"

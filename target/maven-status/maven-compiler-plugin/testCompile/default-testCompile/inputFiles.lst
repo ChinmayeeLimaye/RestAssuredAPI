@@ -1,7 +1,8 @@
-/home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/stepDefinations/StepDefination.java
 /home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/com/weavapi/utilities/APIResources.java
 /home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/com/weavapi/utilities/ReadConfig.java
+/home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/stepDefinations/DataBrowserAPI/StepDefination.java
+/home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/stepDefinations/DataBrowserAPI/GetRowsStepDefination.java
+/home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/stepDefinations/IngestionAPI/ConfigureConnectorStepDefination.java
 /home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/com/weavapi/utilities/Validation_method.java
-/home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/stepDefinations/GetRowsStepDefination.java
 /home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/cucumber/Options/TestRunner.java
 /home/chinmayee/eclipse-workspace/WeavAI_API_Automation_BDD/src/test/java/com/weavapi/utilities/Check_sorted_columns.java

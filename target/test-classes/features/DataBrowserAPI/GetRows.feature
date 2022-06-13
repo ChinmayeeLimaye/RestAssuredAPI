@@ -25,13 +25,13 @@ Examples:
 Scenario: Verify Get_Rows when no input file is given
 Given the user has datasetid and versionid through "AddByPathAPI"
 When the user calls "GetRowsAPI" using request payload "get_rows_fail.json"
-Then user should get status code 400
+Then user should get status code 500
 And user should get status line as "HTTP/1.0 500 INTERNAL SERVER ERROR"
 And message in result should be "fail"
 
 
 Scenario: Verify Get_Rows when no datasetid or version id is provided
-Given the user has no  datasetid and versionid
+Given the user provides no  datasetid and versionid
 When the user calls "GetRowsAPI" using request payload "get_rows_fail.json"
 Then user should get status code 400
 And user should get status line as "HTTP/1.0 400 BAD REQUEST"

@@ -1,0 +1,15 @@
+{
+    "connector_id": "{{connector_id}}",
+    "connector_name": "pokeapi",
+    "connection_configurations": {
+    "pokemon_name": "india"
+     },
+    "user_defined_name": "POkingApi_NOT",
+    "user_id": "Sheshan01",
+    "auth_method": "dummy",
+    "auth_token": "dummy_data",
+    "token_expiry_time": "dummy",
+    "project_id": "Pokeapi_data56",
+    "password": "dummy",
+    "api_key": "dummy"
+}

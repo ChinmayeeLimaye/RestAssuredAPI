@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinations.DataBrowserAPI;
 
 import static io.restassured.RestAssured.given;
 
@@ -102,9 +102,15 @@ public class StepDefination {
 		  mapObject = mapper.readValue(jsonFile,new
 		  TypeReference<Map<String, Object>>() {});
 		  
+		  if(mapObject.containsKey("dataset_id"))
+		  {
+		  
 		  mapObject.put("dataset_id", datasetid);
 		  
 		 mapObject.put("version_id", versionid);
+		  }
+		  
+		  else System.out.println("dataset_id not present");
 		 
 		 
 		 
@@ -145,7 +151,7 @@ public class StepDefination {
 	   }
 	
 	
-	@Given("the user has no  datasetid and versionid")
+	@Given("the user provides no  datasetid and versionid")
 	public void the_user_has_no_datasetid_and_versionid() {
 	    // Write code here that turns the phrase above into concrete actions
 	   

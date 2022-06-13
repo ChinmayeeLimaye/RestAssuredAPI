@@ -1,0 +1,16 @@
+{
+    "user_id": "Sheshan01",
+    "workspace_id": "{{workspace_id}}",
+    "connector_name": "Pokeapi",
+    "weav_dataset_name": "MainDataset",
+    "user_defined_name": "Pokeapi_data5",
+    "auth_method": "dummy",
+    "auth_token": "dummy",
+    "token_expiry_time": "dummy",
+    "project_id": "Pokeapi_data5",
+    "password": "dummy",
+    "api_key": "dummy",
+    "connection_configurations": {
+		"pokemon_name": "bulbasaur"
+        }
+}
